@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>TodoApp</title>
 </head>
 <body>
-    
+    <header>
+        <div class="title">Todo</div>
+        <div class="icon theme-change-icon"></div>
+    </header>
+    <main>
+        <div class="new-todo"><img src="#" alt="Add the new Todo"><input class="new-todo" type="text" placeholder="Create a new todo..."></div>
+
+        <ul class="added-todos">
+            <li><img src="./images/icon-check.svg" alt="Check the Todo">Todo Test <img src="./images/icon-cross.svg" alt="#" class="remove-todo"></li>
+        </ul>
+        <div class="use-options">
+            <div class="items-left"></div>
+            <div class="clear-todos">Clear Completed</div>
+        </div>
+        <div class="filter-options">
+            <span class="all-todos">All</span>
+            <span class="active-todos">Active</span>
+            <span class="Completed-todos">Completed</span>
+        </div>
+    </main>
+    <footer>Drag and drop to reorder list</footer>
+    <script src="./src/app.js"></script>
 </body>
 </html>
