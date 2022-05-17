@@ -26,7 +26,6 @@ body {
 }
 
 body header {
-  border: 3px solid red;
   background-image: url(../images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -58,7 +57,6 @@ body header .title {
 }
 
 body main {
-  border: 3px solid aquamarine;
   width: 85%;
   height: 70%;
   z-index: 1;
@@ -69,15 +67,10 @@ body main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 body main div, body main ul {
-  border: 1px solid pink;
   width: 100%;
-  background-color: #25273c;
   border-radius: 5px;
 }
 
@@ -91,6 +84,7 @@ body main div, body main li {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 3% 4%;
+  background-color: #25273c;
 }
 
 body main .icon-select {
@@ -126,6 +120,12 @@ body main .new-todo .new-todo-input:focus {
   outline: none;
 }
 
+body main .added-todos {
+  max-height: 100%;
+  margin-top: 5%;
+  background-color: red;
+}
+
 body main .added-todos li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,10 +137,61 @@ body main .added-todos li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid yellow;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cacde8;
+  color: #fafafa;
+  font-weight: 400;
+  padding-top: 6%;
+  padding-bottom: 6%;
 }
 
 body main .added-todos li .icon-select {
   margin-right: 3%;
+}
+
+body main .use-options {
+  color: #777a92;
+  font-weight: 400;
+  font-size: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0 0 5px 5px;
+}
+
+body main .filter-options {
+  color: #777a92;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-weight: 700;
+  margin-top: 5%;
+}
+
+body footer {
+  color: #777a92;
 }
 /*# sourceMappingURL=style.css.map */
