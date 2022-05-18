@@ -151,6 +151,10 @@ body main .added-todos li .icon-select {
   margin-right: 3%;
 }
 
+body main .added-todos li .todo-text {
+  width: 100%;
+}
+
 body main .use-options {
   color: #777a92;
   font-weight: 400;
@@ -193,5 +197,103 @@ body main .filter-options {
 
 body footer {
   color: #777a92;
+}
+
+.body-light {
+  background-color: #e4e5f1;
+}
+
+.body-light header {
+  background-image: url(../images/bg-mobile-light.jpg);
+}
+
+.body-light header .title {
+  color: #fafafa;
+}
+
+.body-light header img {
+  src: './images/icon-moon.svg';
+}
+
+.body-light main div, .body-light main li {
+  height: 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 3% 4%;
+  background-color: #fafafa;
+}
+
+.body-light main .icon-select {
+  border: 1px solid #fafafa;
+}
+
+.body-light main .new-todo .new-todo-input {
+  background-color: #fafafa;
+  border: none;
+  color: #393a4c;
+}
+
+.body-light main .new-todo .new-todo-input:focus {
+  outline: none;
+}
+
+.body-light main .added-todos li {
+  border-bottom: 1px solid #cacde8;
+  color: #393a4c;
+  border-bottom: 1px solid #9394a5;
+}
+
+.body-light main .use-options {
+  color: #9394a5;
+  border-radius: 0 0 5px 5px;
+}
+
+.body-light main .filter-options {
+  color: #9394a5;
+}
+
+.body-light footer {
+  color: #9394a5;
+}
+
+@media screen and (min-width: 462px) {
+  body header {
+    padding: 5% 7% 0 7%;
+  }
+  body main {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body header {
+    padding: 3% 20% 0 20%;
+  }
+  body main {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body header {
+    padding: 3% 25% 0 25%;
+  }
+  body main {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body header {
+    padding: 3% 30% 0 30%;
+  }
+  body main {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

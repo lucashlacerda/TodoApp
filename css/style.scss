@@ -85,6 +85,9 @@ body{
                 .icon-select{
                     margin-right:3%;
                 }
+                .todo-text{
+                    width: 100%;
+                }
                 
             }
         }
@@ -113,4 +116,97 @@ body{
     footer{
         color: $darkGrayishBlue;
     }
+}
+.body-light{
+    background-color: $veryLightGrayishBlue;
+    header{
+        background-image: url(../images/bg-mobile-light.jpg);
+        .title{
+            color: $veryLightGray;
+        }
+        img{
+            src: './images/icon-moon.svg';
+        }
+    }
+    main{
+        div, li{
+            height: 7%;
+            display: flex;
+            flex-direction:row;
+            padding: 3% 4%;
+            background-color: $veryLightGray;
+        }
+        
+        .icon-select{
+            border: 1px solid $veryLightGray;
+        }
+        .new-todo{
+            .new-todo-input{
+                background-color:$veryLightGray;
+                border:none;
+                color: $veryDarkGrayishBlue;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .added-todos{
+            li{
+                border-bottom: 1px solid $lightGrayishBlue;
+                color: $veryDarkGrayishBlue;
+                border-bottom: 1px solid $darkGrayishBlue-light;
+            }
+        }
+        .use-options{
+            color: $darkGrayishBlue-light;
+            border-radius: 0 0 5px 5px;
+        }
+        .filter-options{
+            color: $darkGrayishBlue-light;
+        }
+    }
+    footer{
+        color: $darkGrayishBlue-light;
+    }
+}
+@media screen and (min-width: $layout-breakpoint-small){
+    body{
+        header{
+        padding: 5% 7% 0 7%;;
+    }
+    main{
+        width: 60%;
+    }
+}
+}
+
+@media screen and (min-width: $layout-breakpoint-medium){
+    body{
+        header{
+        padding: 3% 20% 0 20%;
+    }
+    main{
+        width: 60%;
+    }
+}
+}
+@media screen and (min-width: $layout-breakpoint-large){
+    body{
+        header{
+        padding: 3% 25% 0 25%;
+    }
+    main{
+        width: 50%;
+    }
+}
+}
+@media screen and (min-width: $layout-breakpoint-extra-large){
+    body{
+        header{
+        padding: 3% 30% 0 30%;
+    }
+    main{
+        width: 60%;
+    }
+}
 }
