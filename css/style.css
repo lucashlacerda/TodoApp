@@ -5,6 +5,8 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 body {
@@ -94,6 +96,15 @@ body main .icon-select {
   height: 20px;
 }
 
+body main .selected-icon {
+  background-image: url(../images/icon-check.svg), -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
+  background-image: url(../images/icon-check.svg), linear-gradient(#57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
 body main .new-todo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,7 +124,7 @@ body main .new-todo .new-todo-input {
   margin-left: 3%;
   background-color: #25273c;
   border: none;
-  color: #cacde8;
+  color: #d2d3db;
 }
 
 body main .new-todo .new-todo-input:focus {
@@ -123,7 +134,8 @@ body main .new-todo .new-todo-input:focus {
 body main .added-todos {
   max-height: 100%;
   margin-top: 5%;
-  background-color: red;
+  background-color: #25273c;
+  border-radius: 5px 5px 0 0;
 }
 
 body main .added-todos li {
@@ -140,7 +152,7 @@ body main .added-todos li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #cacde8;
+  border-bottom: 1px solid #777a92;
   color: #fafafa;
   font-weight: 400;
   padding-top: 6%;
@@ -195,6 +207,12 @@ body main .filter-options {
   margin-top: 5%;
 }
 
+body main .filter-selected {
+  color: #3a7bfd;
+  -webkit-transition: 0.30s;
+  transition: 0.30s;
+}
+
 body footer {
   color: #777a92;
 }
@@ -216,41 +234,30 @@ body footer {
 }
 
 .body-light main div, .body-light main li {
-  height: 7%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 3% 4%;
   background-color: #fafafa;
 }
 
 .body-light main .icon-select {
-  border: 1px solid #fafafa;
+  border: 1px solid #d2d3db;
 }
 
 .body-light main .new-todo .new-todo-input {
   background-color: #fafafa;
-  border: none;
   color: #393a4c;
 }
 
-.body-light main .new-todo .new-todo-input:focus {
-  outline: none;
+.body-light main .added-todos {
+  background-color: #fafafa;
 }
 
 .body-light main .added-todos li {
-  border-bottom: 1px solid #cacde8;
+  border-bottom: 1px solid #d2d3db;
   color: #393a4c;
-  border-bottom: 1px solid #9394a5;
+  border-bottom: 1px solid #d2d3db;
 }
 
 .body-light main .use-options {
   color: #9394a5;
-  border-radius: 0 0 5px 5px;
 }
 
 .body-light main .filter-options {
@@ -262,15 +269,6 @@ body footer {
 }
 
 @media screen and (min-width: 462px) {
-  body header {
-    padding: 5% 7% 0 7%;
-  }
-  body main {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 768px) {
   body header {
     padding: 3% 20% 0 20%;
   }
@@ -286,6 +284,10 @@ body footer {
   body main {
     width: 50%;
   }
+  body main .added-todos li {
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -293,7 +295,11 @@ body footer {
     padding: 3% 30% 0 30%;
   }
   body main {
-    width: 60%;
+    width: 40%;
+  }
+  body main .added-todos li {
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -26,6 +26,7 @@ body{
             font-size: 1.6em;
             letter-spacing: 7px;
         }
+        
     }
     main{
         width: 85%;
@@ -43,14 +44,19 @@ body{
             display: flex;
             flex-direction:row;
             padding: 3% 4%;
-            background-color: $veryDarkDesaturatedBlue
+            background-color: $veryDarkDesaturatedBlue;
         }
-        
         .icon-select{
             border: 1px solid $darkGrayishBlue;
             border-radius: 50%;
             width: 20px;
             height: 20px;
+        }
+        .selected-icon{
+            background-image: url(../images/icon-check.svg), linear-gradient($linearColorOne, $linearColorTwo);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 0.25s;
         }
         .new-todo{
             display: flex;
@@ -71,13 +77,14 @@ body{
         .added-todos{
             max-height: 100%;
             margin-top: 5%;
-            background-color: red;
+            background-color: $veryDarkDesaturatedBlue;
+            border-radius:5px 5px 0 0;
             li{
                 display: flex;
                 flex-direction: row;
                 align-items:center;
                 justify-content: space-between;
-                border-bottom: 1px solid $lightGrayishBlue;
+                border-bottom: 1px solid $darkGrayishBlue;
                 color: $veryLightGray;
                 font-weight: 400;
                 padding-top: 6%;
@@ -112,6 +119,10 @@ body{
             font-weight: 700;
             margin-top: 5%;
         }
+        .filter-selected{
+            color:$brightBlue;
+            transition: 0.30s;
+        }
     }
     footer{
         color: $darkGrayishBlue;
@@ -130,36 +141,28 @@ body{
     }
     main{
         div, li{
-            height: 7%;
-            display: flex;
-            flex-direction:row;
-            padding: 3% 4%;
             background-color: $veryLightGray;
         }
         
         .icon-select{
-            border: 1px solid $veryLightGray;
+            border: 1px solid $lightGrayishBlue;
         }
         .new-todo{
             .new-todo-input{
                 background-color:$veryLightGray;
-                border:none;
                 color: $veryDarkGrayishBlue;
-                &:focus{
-                    outline: none;
-                }
             }
         }
         .added-todos{
+            background-color:$veryLightGray;
             li{
                 border-bottom: 1px solid $lightGrayishBlue;
                 color: $veryDarkGrayishBlue;
-                border-bottom: 1px solid $darkGrayishBlue-light;
+                border-bottom: 1px solid $lightGrayishBlue;
             }
         }
         .use-options{
             color: $darkGrayishBlue-light;
-            border-radius: 0 0 5px 5px;
         }
         .filter-options{
             color: $darkGrayishBlue-light;
@@ -169,18 +172,8 @@ body{
         color: $darkGrayishBlue-light;
     }
 }
-@media screen and (min-width: $layout-breakpoint-small){
-    body{
-        header{
-        padding: 5% 7% 0 7%;;
-    }
-    main{
-        width: 60%;
-    }
-}
-}
 
-@media screen and (min-width: $layout-breakpoint-medium){
+@media screen and (min-width: $layout-breakpoint-small){
     body{
         header{
         padding: 3% 20% 0 20%;
@@ -190,6 +183,7 @@ body{
     }
 }
 }
+
 @media screen and (min-width: $layout-breakpoint-large){
     body{
         header{
@@ -197,6 +191,13 @@ body{
     }
     main{
         width: 50%;
+        .added-todos{
+            li{
+                padding-top: 4%;
+                padding-bottom: 4%;
+            }
+        }
+        
     }
 }
 }
@@ -206,7 +207,13 @@ body{
         padding: 3% 30% 0 30%;
     }
     main{
-        width: 60%;
+        width: 40%;
+        .added-todos{
+            li{
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+        }
     }
 }
 }

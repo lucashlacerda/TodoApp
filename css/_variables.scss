@@ -1,6 +1,7 @@
 //Primary Colors
 $brightBlue: hsl(220, 98%, 61%);
-$checkBackground: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%));
+$linearColorOne: hsl(192, 100%, 67%);
+$linearColorTwo: hsl(280, 87%, 65%);
 
 //Light Theme Colors
 $veryLightGray: hsl(0, 0%, 98%);
@@ -13,7 +14,7 @@ $veryDarkGrayishBlue: hsl(235, 19%, 35%);
 
 $veryDarkBlue: hsl(235, 21%, 11%);
 $veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
-$lightGrayishBlue: hsl(234, 39%, 85%);
+$lightGrayishBlue-dark: hsl(234, 39%, 85%);
 $lightGrayishBlueHover: hsl(236, 33%, 92%);
 $darkGrayishBlue: hsl(234, 11%, 52%);
 $veryDarkGrayishBlue: hsl(233, 14%, 35%);

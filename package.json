@@ -1,0 +1,19 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "Todo app using HTML, CSS/SCSS and JavaScript.\r I hope so much it goes well.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucashlacerda/TodoApp.git"
+  },
+  "author": "Lucas Lacerda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucashlacerda/TodoApp/issues"
+  },
+  "homepage": "https://github.com/lucashlacerda/TodoApp#readme"
+}
