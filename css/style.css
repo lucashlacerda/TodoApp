@@ -90,13 +90,16 @@ body main div, body main li {
 }
 
 body main .icon-select {
+  height: 20px;
+  width: 23px;
+  -webkit-appearance: none;
   border: 1px solid #777a92;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  display: inline-block;
+  position: relative;
 }
 
-body main .selected-icon {
+body main .icon-select:checked {
   background-image: url(../images/icon-check.svg), -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
   background-image: url(../images/icon-check.svg), linear-gradient(#57ddff, #c058f3);
   background-repeat: no-repeat;

@@ -47,17 +47,26 @@ body{
             background-color: $veryDarkDesaturatedBlue;
         }
         .icon-select{
-            border: 1px solid $darkGrayishBlue;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
+                height: 20px;
+                width: 23px;
+                -webkit-appearance: none;
+                border: 1px solid $darkGrayishBlue;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
         }
-        .selected-icon{
+        .icon-select:checked{
             background-image: url(../images/icon-check.svg), linear-gradient($linearColorOne, $linearColorTwo);
             background-repeat: no-repeat;
             background-position: center;
             transition: 0.25s;
         }
+        // .selected-icon{
+        //     background-image: url(../images/icon-check.svg), linear-gradient($linearColorOne, $linearColorTwo);
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     transition: 0.25s;
+        // }
         .new-todo{
             display: flex;
             flex-direction: row;
