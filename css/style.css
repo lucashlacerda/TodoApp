@@ -27,7 +27,7 @@ body {
   height: 100vh;
 }
 
-body header {
+body .header {
   background-image: url(../images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -51,14 +51,14 @@ body header {
   padding: 15% 7% 0 7%;
 }
 
-body header .title {
+body .header .header__title {
   color: #fafafa;
   font-weight: 700;
   font-size: 1.6em;
   letter-spacing: 7px;
 }
 
-body main {
+body .main {
   width: 85%;
   height: 70%;
   z-index: 1;
@@ -71,12 +71,12 @@ body main {
           flex-direction: column;
 }
 
-body main div, body main ul {
+body .main div, body .main .todos {
   width: 100%;
   border-radius: 5px;
 }
 
-body main div, body main li {
+body .main div, body .main .todos__added {
   height: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,26 +89,7 @@ body main div, body main li {
   background-color: #25273c;
 }
 
-body main .icon-select {
-  height: 20px;
-  width: 23px;
-  -webkit-appearance: none;
-  border: 1px solid #777a92;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-}
-
-body main .icon-select:checked {
-  background-image: url(../images/icon-check.svg), -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
-  background-image: url(../images/icon-check.svg), linear-gradient(#57ddff, #c058f3);
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-}
-
-body main .new-todo {
+body .main .new-todo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,7 +102,7 @@ body main .new-todo {
           align-items: center;
 }
 
-body main .new-todo .new-todo-input {
+body .main .new-todo .new-todo__input {
   width: 100%;
   height: 20px;
   margin-left: 3%;
@@ -130,18 +111,44 @@ body main .new-todo .new-todo-input {
   color: #d2d3db;
 }
 
-body main .new-todo .new-todo-input:focus {
+body .main .new-todo .new-todo__input:focus {
   outline: none;
 }
 
-body main .added-todos {
+body .main .todos-added__icon-select, body .main .icon-select {
+  height: 20px;
+  width: 23px;
+  -webkit-appearance: none;
+  border: 1px solid #777a92;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+body .main .todos-added__icon-select:checked {
+  background-image: url(../images/icon-check.svg), -webkit-gradient(linear, left top, left bottom, from(#57ddff), to(#c058f3));
+  background-image: url(../images/icon-check.svg), linear-gradient(#57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+body .main .todos {
   max-height: 100%;
   margin-top: 5%;
   background-color: #25273c;
   border-radius: 5px 5px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body main .added-todos li {
+body .main .todos .todos__added {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,15 +169,15 @@ body main .added-todos li {
   padding-bottom: 6%;
 }
 
-body main .added-todos li .icon-select {
+body .main .todos .todos__added .todos-added__icon-select {
   margin-right: 3%;
 }
 
-body main .added-todos li .todo-text {
+body .main .todos .todos__added .todos-added__text {
   width: 100%;
 }
 
-body main .use-options {
+body .main .status {
   color: #777a92;
   font-weight: 400;
   font-size: .75rem;
@@ -190,7 +197,7 @@ body main .use-options {
   border-radius: 0 0 5px 5px;
 }
 
-body main .filter-options {
+body .main .filter {
   color: #777a92;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,97 +217,97 @@ body main .filter-options {
   margin-top: 5%;
 }
 
-body main .filter-selected {
+body .main .filter--selected {
   color: #3a7bfd;
   -webkit-transition: 0.30s;
   transition: 0.30s;
 }
 
-body footer {
+body .footer {
   color: #777a92;
 }
 
-.body-light {
+.body--light {
   background-color: #e4e5f1;
 }
 
-.body-light header {
+.body--light .header {
   background-image: url(../images/bg-mobile-light.jpg);
 }
 
-.body-light header .title {
+.body--light .header .header__title {
   color: #fafafa;
 }
 
-.body-light header img {
+.body--light .header .header__theme-change {
   src: './images/icon-moon.svg';
 }
 
-.body-light main div, .body-light main li {
+.body--light .main div, .body--light .main .todos__added {
   background-color: #fafafa;
 }
 
-.body-light main .icon-select {
+.body--light .main .todos-added__icon-select {
   border: 1px solid #d2d3db;
 }
 
-.body-light main .new-todo .new-todo-input {
+.body--light .main .new-todo .new-todo__input {
   background-color: #fafafa;
   color: #393a4c;
 }
 
-.body-light main .added-todos {
+.body--light .main .todos {
   background-color: #fafafa;
 }
 
-.body-light main .added-todos li {
+.body--light .main .todos .todos__added {
   border-bottom: 1px solid #d2d3db;
   color: #393a4c;
   border-bottom: 1px solid #d2d3db;
 }
 
-.body-light main .use-options {
+.body--light .main .status {
   color: #9394a5;
 }
 
-.body-light main .filter-options {
+.body--light .main .filter {
   color: #9394a5;
 }
 
-.body-light footer {
+.body--light .footer {
   color: #9394a5;
 }
 
 @media screen and (min-width: 462px) {
-  body header {
+  body .header {
     padding: 3% 20% 0 20%;
   }
-  body main {
+  body .main {
     width: 60%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  body header {
+  body .header {
     padding: 3% 25% 0 25%;
   }
-  body main {
+  body .main {
     width: 50%;
   }
-  body main .added-todos li {
+  body .main .todos .todos__added {
     padding-top: 4%;
     padding-bottom: 4%;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  body header {
+  body .header {
     padding: 3% 30% 0 30%;
   }
-  body main {
+  body .main {
     width: 40%;
   }
-  body main .added-todos li {
+  body .main .todos .todos__added {
     padding-top: 3%;
     padding-bottom: 3%;
   }

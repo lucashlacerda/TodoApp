@@ -8,27 +8,34 @@
     <title>TodoApp</title>
 </head>
 <body>
-    <header>
-        <div class="title">TODO</div>
-        <img src="./images/icon-sun.svg" alt="Sun that changes the theme to light.">
+    <header class="header">
+        <div class="header__title">TODO</div>
+        <img class="header__theme-change" src="./images/icon-sun.svg" alt="Sun that changes the theme to light.">
     </header>
-    <main>
-        <div class="new-todo"><span class="icon-select"></span><input class="new-todo-input" type="text" placeholder="Create a new todo..."></div>
-
-        <ul class="added-todos">
-            <li><input type="checkbox" class="icon-select"></span><span class="todo-text">Todo Test</span><img src="./images/icon-cross.svg" alt="Remove the current todo"></li>
-        </ul>
-        <div class="use-options">
-            <span class="items-left">0</span>
-            <span class="clear-todos">Clear Completed</span>
+    <main class="main">
+        <div class="new-todo">
+            <span class="new-todo__icon-select icon-select"></span>
+            <input class="new-todo__input" type="text" placeholder="Create a new todo...">
         </div>
-        <div class="filter-options">
-            <span class="all-todos button-filter filter-selected">All</span>
-            <span class="active-todos button-filter">Active</span>
-            <span class="completed-todos button-filter">Completed</span>
+
+        <ul class="todos">
+            <li class="todos__added">
+                <input type="checkbox" class="todos-added__icon-select">
+                </span><span class="todos-added__text">Todo Test</span>
+                <img src="./images/icon-cross.svg" alt="Remove the current todo" class="todos-added__icon-remove">
+            </li>
+        </ul>
+        <div class="status">
+            <span class="status__items-left">0</span>
+            <span class="status__clear-todos">Clear Completed</span>
+        </div>
+        <div class="filter">
+            <span class="filter__all filter__button filter--selected">All</span>
+            <span class="filter__active filter__button">Active</span>
+            <span class="filter__completed filter__button">Completed</span>
         </div>
     </main>
-    <footer>Drag and drop to reorder list</footer>
+    <footer class="footer">Drag and drop to reorder list</footer>
     <script src="./src/app.js"></script>
 </body>
 </html>
