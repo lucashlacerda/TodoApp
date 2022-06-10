@@ -105,7 +105,6 @@ body{
             }
         }
         .status{
-            color: $darkGrayishBlue;
             font-weight: 400;
             font-size: .75rem;
             display: flex;
@@ -113,6 +112,12 @@ body{
             align-items:center;
             justify-content:space-between;
             border-radius: 0 0 5px 5px;
+            .status__clear-todos, .status__items-left{
+                background-color:$veryDarkDesaturatedBlue;
+                border: none;
+                color: $darkGrayishBlue;
+
+            }
         }
         .filter{
             color: $darkGrayishBlue;

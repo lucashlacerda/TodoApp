@@ -178,7 +178,6 @@ body .main .todos .todos__added .todos-added__text {
 }
 
 body .main .status {
-  color: #777a92;
   font-weight: 400;
   font-size: .75rem;
   display: -webkit-box;
@@ -195,6 +194,12 @@ body .main .status {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 0 0 5px 5px;
+}
+
+body .main .status .status__clear-todos, body .main .status .status__items-left {
+  background-color: #25273c;
+  border: none;
+  color: #777a92;
 }
 
 body .main .filter {

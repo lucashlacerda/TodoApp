@@ -5,8 +5,10 @@ const buttonAllTodos = document.querySelector('.filter__all');
 const buttonActiveTodos = document.querySelector('.filter__active');
 const buttonCompletedTodos = document.querySelector('.filter__completed');
 const newTodoInput = document.querySelector('.new-todo__input');
-const addedTodos = document.querySelector('.todos');
+let addedTodos = document.querySelector('.todos');
 const itensLeft = document.querySelector('.status__items-left');
+const clearAll = document.querySelector('.status__clear-todos');
+let todoItems = document.querySelectorAll('.todos__added');
 let theme = true; //true if theme is dark, false otherwise
 let showAll = true;
 let showActive = false;
@@ -71,6 +73,7 @@ newTodoInput.addEventListener('blur', ()=>{
         addedTodos.append(createNewTodo(newTodoText));
         newTodoInput.value = '';
         addedTodos = document.querySelector('.todos');
+        todoItems = document.querySelectorAll('.todos__added');
     }
 }); //Add the new todo to the list
 newTodoInput.addEventListener('keydown', (e)=>{
@@ -79,6 +82,7 @@ newTodoInput.addEventListener('keydown', (e)=>{
         addedTodos.append(createNewTodo(newTodoText));
         newTodoInput.value = '';
         addedTodos = document.querySelector('.todos');
+        todoItems = document.querySelectorAll('.todos__added');
     }
 }); //Add the new todo to the list
 
@@ -98,7 +102,7 @@ function createNewTodo(text){
     return li;
 } //Create a new todo
 
+clearAll.addEventListener('click', () => {
+    todoItems.forEach(todoItem => todoItem.remove());
 
-
-
-
+})
